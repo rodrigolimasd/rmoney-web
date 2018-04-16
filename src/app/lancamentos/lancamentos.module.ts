@@ -11,6 +11,8 @@ import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { LancamentosGridComponent } from './lancamentos-grid/lancamentos-grid.component';
 import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos-pesquisa.component';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
+import { SharedModule } from './../shared/shared.module';
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -28,7 +30,9 @@ import { FormsModule } from '@angular/forms';
     CalendarModule,
     SelectButtonModule,
     DropdownModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
+
+    SharedModule
   ],
   declarations: [
     LancamentoCadastroComponent,
