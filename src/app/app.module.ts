@@ -1,3 +1,4 @@
+import { PessoaService } from './pessoas/pessoa.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
@@ -28,7 +29,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     BrowserAnimationsModule
   ],
-  providers: [LancamentoService],
+  providers: [LancamentoService, PessoaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
