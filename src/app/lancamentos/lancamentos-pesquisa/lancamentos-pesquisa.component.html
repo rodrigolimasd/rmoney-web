@@ -47,7 +47,7 @@
           <ng-template pTemplate="body" let-lanc="rowData">
               <a pButton icon="fa-pencil" pTooltip="Editar" tooltipPosition="top"></a>
               <button [style.vertical-align]="'top'" pButton icon="fa-trash" pTooltip="Excluir"
-              (click)="excluir(lanc)" tooltipPosition="top"></button>
+              (click)="confirmarExclusao(lanc)" tooltipPosition="top"></button>
           </ng-template>
         </p-column>
 
