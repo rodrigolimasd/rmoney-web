@@ -45,12 +45,12 @@
         </p-column>
         <p-column styleClass="col-acoes">
           <ng-template pTemplate="body" let-lanc="rowData">
-              <a pButton icon="fa-pencil" pTooltip="Editar" tooltipPosition="top"></a>
+              <a pButton icon="fa-pencil" pTooltip="Editar" tooltipPosition="top"
+              [routerLink]="['/lancamentos', lanc.codigo]"></a>
               <button [style.vertical-align]="'top'" pButton icon="fa-trash" pTooltip="Excluir"
               (click)="confirmarExclusao(lanc)" tooltipPosition="top"></button>
           </ng-template>
         </p-column>
-
       </p-dataTable>
     </div>
 
