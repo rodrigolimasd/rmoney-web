@@ -30,10 +30,6 @@ import { FormsModule } from '@angular/forms';
     PessoaCadastroComponent,
     PessoasPesquisaComponent,
     PessoasGridComponent
-  ],
-  exports: [
-    PessoaCadastroComponent,
-    PessoasPesquisaComponent
   ]
 })
 export class PessoasModule { }

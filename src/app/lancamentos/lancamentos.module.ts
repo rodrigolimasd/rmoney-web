@@ -40,10 +40,6 @@ import { FormsModule } from '@angular/forms';
     LancamentoCadastroComponent,
     LancamentosPesquisaComponent,
     LancamentosGridComponent
-  ],
-  exports: [
-    LancamentoCadastroComponent,
-    LancamentosPesquisaComponent
   ]
 })
 export class LancamentosModule { }
