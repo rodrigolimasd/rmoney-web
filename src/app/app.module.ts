@@ -1,3 +1,4 @@
+import { SegurancaModule } from './seguranca/seguranca.module';
 import { PaginaNaoEncontradaComponent } from './core/pagina-nao-encontrada.component';
 import { PessoaCadastroComponent } from './pessoas/pessoa-cadastro/pessoa-cadastro.component';
 import { PessoasPesquisaComponent } from './pessoas/pessoas-pesquisa/pessoas-pesquisa.component';
@@ -40,7 +41,8 @@ const routes: Routes = [
     CoreModule,
     RouterModule.forRoot(routes),
     LancamentosModule,
-    PessoasModule
+    PessoasModule,
+    SegurancaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
