@@ -6,6 +6,7 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { JwtHelper } from 'angular2-jwt';
 
 import { ConfirmationService } from 'primeng/components/common/api';
 import { ConfirmDialogModule } from 'primeng/components/confirmdialog/confirmdialog';
@@ -39,6 +40,7 @@ registerLocaleData(localePt, 'pt-BR');
     CategoriaService,
     Title,
     AuthService,
+    JwtHelper,
     {provide: LOCALE_ID, useValue: 'pt-BR'}
   ]
 })
