@@ -17,6 +17,7 @@ import { LancamentoService } from './../lancamentos/lancamento.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ErrorHandlerService } from './error-handler.service';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada.component';
+import { NaoAutorizadoComponent } from './nao-autorizado.component';
 
 registerLocaleData(localePt, 'pt-BR');
 @NgModule({
@@ -26,7 +27,11 @@ registerLocaleData(localePt, 'pt-BR');
     ConfirmDialogModule,
     RouterModule
   ],
-  declarations: [NavbarComponent, PaginaNaoEncontradaComponent],
+  declarations: [
+    NavbarComponent,
+    PaginaNaoEncontradaComponent,
+    NaoAutorizadoComponent
+  ],
   exports: [
     NavbarComponent,
     ToastyModule,

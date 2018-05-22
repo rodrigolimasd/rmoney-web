@@ -1,3 +1,4 @@
+import { AuthGuard } from './auth.guard';
 import { Http, RequestOptions } from '@angular/http';
 import { ButtonModule } from 'primeng/components/button/button';
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
@@ -36,7 +37,8 @@ export function authHttpServiceFactory(auth: AuthService, http: Http, options: R
       provide: AuthHttp,
       useFactory: authHttpServiceFactory,
       deps: [AuthService, Http, RequestOptions]
-    }
+    },
+    AuthGuard
   ]
 })
 export class SegurancaModule { }
