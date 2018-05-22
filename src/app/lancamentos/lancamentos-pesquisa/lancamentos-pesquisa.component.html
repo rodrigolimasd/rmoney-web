@@ -46,16 +46,18 @@
         <p-column styleClass="col-acoes">
           <ng-template pTemplate="body" let-lanc="rowData">
               <a pButton icon="fa-pencil" pTooltip="Editar" tooltipPosition="top"
-              [routerLink]="['/lancamentos', lanc.codigo]"></a>
+              [routerLink]="['/lancamentos', lanc.codigo]"
+              *ngIf="auth.temPermissao('ROLE_CADASTRAR_LANCAMENTO')"></a>
               <button [style.vertical-align]="'top'" pButton icon="fa-trash" pTooltip="Excluir"
-              (click)="confirmarExclusao(lanc)" tooltipPosition="top"></button>
+              (click)="confirmarExclusao(lanc)" tooltipPosition="top"
+              [disabled]="!auth.temPermissao('ROLE_REMOVER_LANCAMENTO')"></button>
           </ng-template>
         </p-column>
       </p-dataTable>
     </div>
 
     <div class="ui-g-12">
-      <a pButton routerLink="/lancamentos/novo" label="Novo Lançamento"></a>
+      <a pButton routerLink="/lancamentos/novo" *ngIf="auth.temPermissao('ROLE_CADASTRAR_LANCAMENTO')" label="Novo Lançamento"></a>
     </div>
 
   </div>

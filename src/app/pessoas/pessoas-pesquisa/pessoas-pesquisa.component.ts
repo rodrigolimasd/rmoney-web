@@ -1,9 +1,11 @@
 import { ToastyService } from 'ng2-toasty';
-import { ErrorHandlerService } from './../../core/error-handler.service';
-import { ConfirmationService } from 'primeng/components/common/api';
 import { LazyLoadEvent } from 'primeng/components/common/lazyloadevent';
-import { PessoaFiltro, PessoaService } from './../pessoa.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { ConfirmationService } from 'primeng/components/common/api';
+
+import { AuthService } from './../../seguranca/auth.service';
+import { ErrorHandlerService } from './../../core/error-handler.service';
+import { PessoaFiltro, PessoaService } from './../pessoa.service';
 
 @Component({
   selector: 'app-pessoas-pesquisa',
@@ -21,7 +23,8 @@ export class PessoasPesquisaComponent {
     private pessoaService: PessoaService,
     private toasty: ToastyService,
     private confirmation: ConfirmationService,
-    private errorHandler: ErrorHandlerService
+    private errorHandler: ErrorHandlerService,
+    private auth: AuthService
   ) { }
 
   pesquisar(pagina = 0) {
